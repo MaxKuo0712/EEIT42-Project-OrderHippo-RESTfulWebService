@@ -137,7 +137,7 @@ public class MealServicelmp implements MealService {
 
 	@Override
 	public List<MealBean> getByMealhot(Boolean mealhot) {
-		List<MealBean> result = mealRepository.findByMealhot(mealhot);
+		List<MealBean> result = mealRepository.findByMealhotAndMealstatus(mealhot, true);
 		
 		if (!result.isEmpty()) {
 			return result;
